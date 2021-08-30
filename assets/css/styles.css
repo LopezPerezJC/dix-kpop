@@ -5,7 +5,7 @@
     --color-logo: #0C0C13;
     --color-white: #ffffff;
     --color-section-artist: #ffabf2;
-    --color-links: hsl(180, 100%, 40%);
+    --color-links: #00cccc;
 }
 /* MEDIDAS
 1rem = 10px
@@ -34,10 +34,7 @@ header {
     align-items: center;
 }
 
-/* << LOGOTIPO >>*/
-.logo {
-    margin: 0 2rem;
-}
+
 .menu label a {
     font-family: 'Archivo Black';
     font-size: 2.5rem;
@@ -49,7 +46,7 @@ header {
 .menu_items {
     display: flex;
     list-style: none;
-    margin-right: 3rem;
+    margin-right: 1rem;
 }
 .menu_items li {
     margin: 0 1rem;
@@ -77,7 +74,7 @@ header {
 
 /* secciones */
 #home {
-    min-height: calc(100vh - 4rem);
+    min-height: calc(100vh - 5rem);
 }
 #home, #artist-available {
     width: 100%;
@@ -101,24 +98,19 @@ ul.show {
     top: 4.5rem;
 }
 
-/*<< FOOTER >>*/
+/*<< FOOTER GLOBAL>>*/
 footer {
-    min-height: 5rem;
     background-color: var(--color-header-footer-light);
     color: var(--color-white);
-    padding: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    font-size: 1.3rem;
 }
 
 footer .footer-yt {
     color: var(--color-white);
-    margin: 0 .2rem;
-    font-size: 2.5rem;
 }
 
 footer p {
@@ -128,8 +120,9 @@ footer p {
 
 footer p a {
     color: var(--color-links);
-    margin: 0 0 0 .5rem;
 }
+
+
 
 /*
 @media screen and (max-width: 768px){
@@ -142,6 +135,10 @@ footer p a {
 
 /* MOBILE */
 @media screen and (max-width: 480px) {
+    header {
+        border-radius: 3rem;
+        margin: .5rem 1rem;
+    }
     /* MENU */
     .logo a {
         font-size: 2rem;
@@ -154,8 +151,7 @@ footer p a {
     }
     .menu_items {
         position: absolute;
-        width: 100%;
-        height: calc(100% - 4rem);
+        width: calc(100% - 2rem);
         background-color: var(--color-header-footer);
         top: -100vh;
         text-align: center;
@@ -176,11 +172,20 @@ footer p a {
     }
     .menu_items li a:hover {
         color: var(--color-white);
+        background-color: var(--color-subtitles);
     }
     ul.show {
         top: 4rem;
         height: auto;
-        border-radius: 0 0 .8rem .8rem;
+        border-radius: .8rem;
+    }
+    /* << LOGOTIPO >>*/
+    .logo {
+        margin: 0 2rem;
+    }
+    .fa-bars {
+        font-size: 2.5rem;
+        margin-right: 1rem;
     }
 
     /* HOME */
@@ -301,7 +306,28 @@ footer p a {
         color: var(--color-subtitles);
     }
 
-    /**/
+    /* SECTION ARTIST BLOG */
+    #artist-available {
+        border-radius: 0 0 .8rem .8rem;
+    }
+
+    /*<< FOOTER mobile>>*/
+    footer {
+        min-height: 5rem;
+        padding: 1rem;
+        font-size: 1.3rem;
+        border-radius: 3rem;
+        margin: .5rem 1rem;
+    }
+
+    footer .footer-yt {
+        margin: 0 .2rem;
+        font-size: 2.5rem;
+    }
+
+    footer p a {
+        margin: 0 0 0 .5rem;
+    }
 }
 
 /*landscape mobile*/
